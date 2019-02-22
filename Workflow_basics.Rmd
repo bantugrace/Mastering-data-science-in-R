@@ -1,0 +1,51 @@
+---
+title: "Workflow_basics"
+author: "Grace B"
+date: "22 February 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+4.4 Practice
+###1.	Why does this code not work?
+```{r}
+my_variable <- 10
+my_variable
+```
+
+ Error in eval(expr, envir, enclos): object 'my_variable' not found
+Look carefully! (This may seem like an exercise in pointlessness, but training your brain to notice even the tiniest difference will pay off when programming.)
+ my_variable is not found because It is run before assign it to a value 10 . But after assign it a value and running it. It will function properly.
+ 
+###2.	Tweak each of the following R commands so that they run correctly:
+library(tidyverse)
+
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy))
+
+fliter(mpg, cyl = 8)
+filter(diamond, carat > 3)
+
+Correct code
+
+```{r}  
+		  library(tidyverse)
+		  
+		  kk<-mpg
+		  jj<-diamonds
+		  ggplot(data = kk) + 
+		    geom_point(mapping = aes(x = displ, y = hwy))
+		  
+		  filter(kk, cyl == 8)
+		  filter(jj, carat > 3)
+```
+
+
+### 3.	Press Alt + Shift + K. What happens? How can you get to the same place using the menus?
+#Alt+Shift+K gives keyboard short cuts .
+You can get to the same place using tools menu then Key board short cuts.
